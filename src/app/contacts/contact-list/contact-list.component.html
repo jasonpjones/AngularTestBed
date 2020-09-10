@@ -1,8 +1,8 @@
 
-<div *ngIf="contacts$ | async as contacts">
+<div *ngIf="contacts$ | async as contacts" class="contact-list-container">
   <ul>
-    <li *ngFor="let contact of contacts">
-      <span>{{contact.firstName}}</span>
+    <li *ngFor="let contact of contacts" class="contact-list-item">
+      <span>{{contact.displayName}}</span>
     </li>
   </ul>
 </div>
