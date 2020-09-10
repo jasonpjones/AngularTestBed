@@ -1,1 +1,8 @@
-<p>contact-list works!</p>
+
+<div *ngIf="contacts$ | async as contacts">
+  <ul>
+    <li *ngFor="let contact of contacts">
+      <span>{{contact.firstName}}</span>
+    </li>
+  </ul>
+</div>
