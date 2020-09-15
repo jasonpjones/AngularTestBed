@@ -1,3 +1,5 @@
+@import '../../../css/colors.less';
+
 ul {
   list-style: none;
 }
@@ -10,8 +12,10 @@ ul {
 .contact-list-item
 {
   cursor: pointer;
-  border: solid 1px gray;
-  border-radius: 10px;
   padding: 5px;
   margin: 4px 0;
+}
+
+.contact-list-item:hover {
+  background-color: @light-gray;
 }

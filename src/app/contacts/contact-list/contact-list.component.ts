@@ -41,4 +41,9 @@ export class ContactListComponent implements OnInit {
     });
   }
 
+  onSelect(contact: ContactDisplay): void {
+    this.contactService.selectedContact$.next(contact);
+  }
+
+
 }

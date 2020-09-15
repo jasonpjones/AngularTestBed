@@ -1,7 +1,7 @@
 
 <div *ngIf="contacts$ | async as contacts" class="contact-list-container">
   <ul>
-    <li *ngFor="let contact of contacts" class="contact-list-item">
+    <li *ngFor="let contact of contacts" class="contact-list-item rounded medium-gray-border" (click)="onSelect(contact)">
       <span>{{contact.displayName}}</span>
     </li>
   </ul>

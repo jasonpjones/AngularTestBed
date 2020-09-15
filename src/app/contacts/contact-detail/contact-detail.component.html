@@ -1,1 +1,6 @@
 <p>contact-detail works!</p>
+
+<div *ngIf="contactService.selectedContact$ | async as contact">
+  <span>{{contact.displayName}}</span>
+
+</div>
