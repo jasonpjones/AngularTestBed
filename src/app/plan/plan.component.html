@@ -1,14 +1,7 @@
-<div *ngIf="plans$ | async as plans">
+
+
+<div *ngIf="planFeatures$ | async as planFeatures">
   <ul>
-    <li *ngFor='let plan of plans'>{{plan.name}}</li>
+    <li *ngFor="let planFeature of planFeatures">{{planFeature.planName}}</li>
   </ul>
 </div>
-
-<div *ngIf="features$ | async as features">
-  <ul>
-    <li *ngFor='let feature of features'>{{feature.description}}</li>
-
-  </ul>
-</div>
-
-
