@@ -7,18 +7,22 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { ContactListComponent } from './contacts/contact-list/contact-list.component';
 import { ContactDetailComponent } from './contacts/contact-detail/contact-detail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PlanComponent } from './plan/plan.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactsComponent,
     ContactListComponent,
-    ContactDetailComponent
+    ContactDetailComponent,
+    PlanComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
