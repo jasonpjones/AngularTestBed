@@ -1,0 +1,36 @@
+
+
+
+<div class="plan-view-container">
+
+  <div class="header">
+    <h2>Feature Support by Plan</h2>
+  </div>
+
+  <div *ngIf="planFeatures$ | async as planFeatures" class="plan-feature-container">
+
+    <div class="feature-list">
+      <div class="plan-header">&nbsp;</div>
+      <div *ngFor="let feature of features$ | async" class="feature-description">{{feature.description}}</div>
+    </div>  
+
+    <div *ngFor="let plan of planFeatures$ | async" class="plan-lane">
+      <div class="plan-header">{{plan.planName}}</div>
+
+      <ul>
+        <li *ngFor="let featureSupport of plan.featureSupport" class="feature-support-list-item" [ngSwitch]="featureSupport.support">
+          <div *ngSwitchCase="0" class="feature-support-yes">&nbsp;</div>
+          <div *ngSwitchCase="1">&nbsp;</div>
+          <div *ngSwitchCase="2">custom</div>
+        </li>
+      </ul>
+
+
+
+
+    </div>
+
+
+  </div>
+
+</div>
